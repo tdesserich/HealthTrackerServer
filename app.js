@@ -9,7 +9,7 @@ var user = require('./controllers/usercontroller')
 var sequelize = require('./db');
 var bodyParser = require('body-parser');
 
-sequelize.sync({force: true});
+sequelize.sync();
 app.use(bodyParser.json());
 app.use(require('./middleware/headers'));
 
