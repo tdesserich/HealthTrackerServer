@@ -101,7 +101,7 @@ router.delete('/:id', function(req, res) {
     var userid = req.user.id; 
     var data = req.params.id; 
 
-    DiscMeds
+    Incident
         .destroy({ 
             where: { id: data, owner: userid } 
         }).then(
