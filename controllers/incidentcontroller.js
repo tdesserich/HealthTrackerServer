@@ -74,7 +74,7 @@ router.put('/:id', function(req, res) {
     var event = req.body.incident.event;
     var date = req.body.incident.date;
 	var description = req.body.incident.description;
-    var owner = req.incident.id;
+    var owner = req.user.id;
 
     Incident
         .update({ 

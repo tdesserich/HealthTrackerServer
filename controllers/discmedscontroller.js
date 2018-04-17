@@ -82,6 +82,7 @@ router.put('/:id', function(req, res) {
     var frequency = req.body.discMeds.frequency;
     var endDate = req.body.discMeds.startDate;
 
+
     DiscMeds
         .update({ 
             result: discMeds,
