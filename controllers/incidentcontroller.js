@@ -80,7 +80,9 @@ router.put('/:id', function(req, res) {
         .update({ 
             event: event,
             date: date,
-            description: description
+            description: description,
+            owner: owner
+
         },
         {where: {id:data}, returning: true, plain: true} 
         ).then(

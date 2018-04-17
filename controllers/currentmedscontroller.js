@@ -11,6 +11,7 @@ router.post('/', function(req, res) {
     var dosage = req.body.currentMeds.dosage;
     var frequency = req.body.currentMeds.frequency;
     var startDate = req.body.currentMeds.startDate;
+    var owner = req.user.id;
   
 
     CurrentMeds

@@ -8,6 +8,7 @@ var DiscMeds = sequelize.import('../models/discmeds');
 router.post('/', function(req, res) {
     var medicationName = req.body.discMeds.medicationName;
     var reason = req.body.discMeds.reason;
+    var reaction = req.body.discMeds.reaction;
     var dosage = req.body.discMeds.dosage;
     var frequency = req.body.discMeds.frequency;
     var endDate = req.body.discMeds.endDate;
@@ -17,6 +18,7 @@ router.post('/', function(req, res) {
         .create({
             medicationName: medicationName,
             reason: reason,
+            reaction: reaction,
             dosage: dosage,
             frequency: frequency,
             endDate: endDate,
@@ -78,6 +80,7 @@ router.put('/:id', function(req, res) {
     var discMeds = req.body.discMeds.result;
     var medicationName = req.body.discMeds.medicationName;
     var reason = req.body.discMeds.reason;
+    var reaction = req.body.discMeds.reaction;
     var dosage = req.body.discMeds.dosage;
     var frequency = req.body.discMeds.frequency;
     var endDate = req.body.discMeds.startDate;
@@ -88,6 +91,7 @@ router.put('/:id', function(req, res) {
             result: discMeds,
             medicationName: medicationName,
             reason: reason,
+            reaction: reaction,
             dosage: dosage,
             frequency: frequency,
             endDate: endDate
