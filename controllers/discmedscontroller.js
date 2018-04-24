@@ -83,7 +83,7 @@ router.put('/:id', function(req, res) {
     var reaction = req.body.discMeds.reaction;
     var dosage = req.body.discMeds.dosage;
     var frequency = req.body.discMeds.frequency;
-    var endDate = req.body.discMeds.startDate;
+    var endDate = req.body.discMeds.endDate;
 
 
     DiscMeds
