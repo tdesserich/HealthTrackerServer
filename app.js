@@ -14,9 +14,6 @@ app.use(bodyParser.json());
 app.use(require('./middleware/headers'));
 
 //Exposed route
-app.use('/api/test', function(req, res){
-    res.send("This is data from the /api/test endpoint. It's from the server.");
-   });
 app.use('/user', user);
 
 //Protected routes
@@ -25,6 +22,6 @@ app.use('/currentmeds', currentMeds);
 app.use('/discmeds', discMeds);
 app.use('/incident', incident);
 
-app.listen(3000, function(){
-    console.log('App is listening on 3000')
-});
+app.listen(process.env.PORT, function(){
+    console.log(`App is running on ${process.env.PORT}`)
+})
